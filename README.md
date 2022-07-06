@@ -9,7 +9,6 @@ A simple FastAPI authentication application.
 ![ReDoc example](./img/ReDoc.png)
 
 ## Features
-___
 * Python [FastAPI](https://github.com/tiangolo/fastapi) backend:
     * **Fast:** Very high performance, on par with NodeJS and Go (thanks to Starlette and Pydantic).
     * **Intuitive:** Great editor support. Completion everywhere. Less time debugging.
@@ -24,5 +23,4 @@ ___
 * **Smart JWT system**: usage for authentication/multi-factor authentication.
 
 # License
-___
 This project is under the terms of **MIT** license.
