@@ -1,0 +1,33 @@
+[tool.poetry]
+name = "src"
+version = "0.1.0"
+description = "A simple authentication application using FastAPI."
+authors = ["Michael Manasian"]
+license = "MIT"
+readme = "README.md"
+repository = "https://github.com/joannachael/fastapia-auth"
+keywords = ["FastAPI", "authentication", "JSON Web Token"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+uvicorn = "^0.17.6"
+aioredis = "^2.0.1"
+alembic = "^1.8.0"
+asyncpg = "^0.25.0"
+passlib = {extras = ["bcrypt"], version = "^1.7.4"}
+email_validator = "^1.2.1"
+pydantic = "^1.9.1"
+psycopg2-binary = "^2.9.3"
+python-jose = {extras = ["cryptopgraphy"], version = "^3.3.0"}
+SQLAlchemy = "^1.4.39"
+fastapi = "^0.78.0"
+fastapi-mail = "^1.0.9"
+fastapi-utils = "^0.2.1"
+Jinja2 = "^3.1.2"
+python-multipart = "^0.0.5"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
