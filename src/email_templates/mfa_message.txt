@@ -1,0 +1,4 @@
+Hello, {{ user.first_name }} {{ user.last_name}}.
+
+A JSON Web Token was requested on your email address.
+JSON Web Token: {{ jwt }}
