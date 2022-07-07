@@ -21,7 +21,7 @@ async def get_database_session() -> Generator:
         yield session
 
 
-blocklist = jwt_package.JWTBlacklist(
+blacklist = jwt_package.JWTBlacklist(
     StrictRedis(
         host=settings.REDIS_HOST,
         port=settings.REDIS_PORT,
@@ -87,12 +87,12 @@ class JWTProcessor:
 
         if (
             claims.mission != self._mission or
-            await blocklist.is_blocked(jwt)
+            await blacklist.is_blocked(jwt)
         ):
             raise self._exception
 
         if self._add_to_blacklist:
-            await blocklist.block(jwt, claims.exp)
+            await blacklist.block(jwt, claims.exp)
 
         return await self.process_claims(claims, db_session)
 
