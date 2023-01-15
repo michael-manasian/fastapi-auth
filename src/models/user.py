@@ -43,5 +43,5 @@ class User(BaseModel):
 
     @property
     def full_name(self) -> str:
-        return "{} {}".format(self.name, self.surname)
+        return "{} {}".format(self.first_name, self.last_name)
 
